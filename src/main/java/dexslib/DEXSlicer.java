@@ -2,7 +2,11 @@ package dexslib;
 
 public class DEXSlicer {
     
-    public static void main(String args[]){
-       // ForwardSlicer
-    }
+   public void get_Forward_Slicer(){
+
+   }
+
+   public void get_Backward_Slicer(){
+
+   }
 }
