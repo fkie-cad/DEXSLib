@@ -1,0 +1,53 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group 'org.dexslib'
+version '0.7.1'
+
+
+repositories {
+    mavenCentral()
+}
+
+/*
+<groupId>com.example.applications</groupId>
+<artifactId>example-application</artifactId>
+<version>1.4.7</version>
+ */
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'org.dexslib'
+            artifactId = 'DEXSlib'
+            version = '0.7.1'
+
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            name = "$project.group-DEXSlib"
+            // change to point to your repo, e.g. http://my.org/repo
+            // https://github.com/fkie-cad/DEXSLib
+            url "$buildDir/repo"
+        }
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    implementation 'org.smali:dexlib2:2.5.2'
+    implementation 'org.smali:baksmali:2.5.2'
+    implementation 'commons-cli:commons-cli:1.5.0'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'com.google.guava:guava:31.1-jre'
+
+}
+
+test {
+    useJUnitPlatform()
+}
