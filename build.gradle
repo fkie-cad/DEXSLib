@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group 'io.github.monkeywave'
+group 'io.github.fkie-cad'
 version '0.7.1'
 
 
@@ -20,7 +20,7 @@ repositories {
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = 'io.github.monkeywave'
+            groupId = 'io.github.fkie-cad'
             artifactId = 'DEXSlib'
             version = '0.7.1'
 
