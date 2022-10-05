@@ -1,5 +1,5 @@
 # DEXSLib
-![build](https://img.shields.io/circleci/project/github/fkie-cad/DEXSLib/tree/main) ![version](https://img.shields.io/badge/version-0.7.1-blue) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.fkie-cad/DEXSlib/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.fkie-cad/DEXSlib)
+![version](https://img.shields.io/badge/version-0.7.1-blue) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.fkie-cad/DEXSlib/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.fkie-cad/DEXSlib)
 
 This project aims as an open source library for static backward and forward slicing of Smali code when reversing Android applications. 
 
