@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
+    id 'signing'
 }
 
 group 'io.github.fkie-cad'
@@ -11,13 +12,16 @@ repositories {
     mavenCentral()
 }
 
-/*
-<groupId>com.example.applications</groupId>
-<artifactId>example-application</artifactId>
-<version>1.4.7</version>
- */
+
+
+task signJars (type : Sign) {
+    sign configurations.archives
+}
 
 publishing {
+    apply plugin: 'maven-publish'
+    apply plugin: 'signing'
+
     publications {
         maven(MavenPublication) {
             groupId = 'io.github.fkie-cad'
@@ -25,16 +29,56 @@ publishing {
             version = '0.7.1'
 
             from components.java
+
+            pom {
+                name = 'DEXSlib'
+                description = 'A library for static backward and forward slicing of 3rd party, closed, binary Android app in the context for malware analysis.'
+                url = 'https://github.com/fkie-cad/DEXSLib'
+                licenses {
+                    license {
+                        name = 'GNU General Public License v3.0'
+                        url = 'https://github.com/fkie-cad/DEXSLib/blob/main/LICENSE'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git://github.com/fkie-cad/DEXSLib.git'
+                    developerConnection = 'scm:git:git@github.com:fkie-cad/DEXSLib.git'
+                    url = 'https://github.com/fkie-cad/DEXSLib'
+                }
+                developers {
+                    developer {
+                        id = 'monkeywave'
+                        name = 'Daniel Baier'
+                        email = 'danie.baier@fkie.fraunhofer.de'
+                    }
+                }
+            }
         }
     }
     repositories {
         maven {
-            name = "$project.group-DEXSlib"
-            // change to point to your repo, e.g. http://my.org/repo
-            // https://github.com/fkie-cad/DEXSLib
-            url "$buildDir/repo"
+            url = 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
+            credentials {
+                username deployRepoUsername
+                password deployRepoPassword
+            }
         }
     }
+}
+
+
+
+
+
+signing {
+    required { gradle.taskGraph.hasTask('publish') }
+    useGpgCmd()
+    sign(publishing.publications["maven"])
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
 }
 
 dependencies {
@@ -47,6 +91,9 @@ dependencies {
     implementation 'com.google.guava:guava:31.1-jre'
 
 }
+
+
+
 
 test {
     useJUnitPlatform()

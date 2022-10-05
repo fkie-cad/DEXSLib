@@ -23,7 +23,7 @@ public class BackwardSliceOnRegisterLevel {
 
 
     /**
-     * When I identified an deobfuscation method which is not of type <clinit> it is easier to determine the strings which were put into the method
+     * When I identified an deobfuscation method which is not of type {@literal <}clinit{@literal >} it is easier to determine the strings which were put into the method
      *
      *
      * @return an ArrayList of ArrayList of Registers which are used as input for a given method

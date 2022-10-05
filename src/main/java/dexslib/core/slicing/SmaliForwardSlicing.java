@@ -514,7 +514,7 @@ public class SmaliForwardSlicing {
 
     /**
      *
-     *  This methods returns the ClassDef of the <Method>()<ReturnValue>
+     *  This methods returns the ClassDef of the {@literal <}Method{@literal >}(){@literal <}ReturnValue{@literal >}
      *
      *  Immer wenn ich eine Methode identifiziere, welche z.B. statisch einen obfuskierten String zurückgibt, dann möchte ich nun alle Aufrufe dieser Methode im Binary sehen
      *

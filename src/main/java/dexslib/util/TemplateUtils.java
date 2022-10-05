@@ -109,7 +109,7 @@ public class TemplateUtils {
 
     /**
      *
-     * @param instruction we want to analyze for call of <init> from a implemented class
+     * @param instruction we want to analyze for call of {@literal <}init{@literal >} from a implemented class
      * @return
      */
     public static boolean isInitCallFromCore(Instruction instruction,SmaliUnit classSmaliUnit){

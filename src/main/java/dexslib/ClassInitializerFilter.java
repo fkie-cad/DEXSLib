@@ -64,7 +64,7 @@ public class ClassInitializerFilter {
      * @param dexFile
      * @param methodOfClass
      *
-     *  L<class>;-><methodname>(<params>)<ReturnValue>
+     *  L{@literal <}class>;->{@literal <}methodname{@literal >}({@literal <}params{@literal >}){@literal <}ReturnValue{@literal >}
      *
      * @return
      */
@@ -213,7 +213,7 @@ public class ClassInitializerFilter {
 
 
     /**
-        This methods return the ClassDef of the L<Class>;-><Method>;
+        This methods return the ClassDef of the L{@literal <}Class{@literal >};->{@literal <}Method{@literal >};
 
         @return returns true if the method was found and false if not.
      */
@@ -276,7 +276,7 @@ public class ClassInitializerFilter {
 
 
     /**
-      This methods return the ClassDef of all classes which have this <Method>; for a backslice
+      This methods return the ClassDef of all classes which have this {@literal <}Method{@literal >}; for a backslice
 
    */
     protected static TreeSet<ClassDef> getAllClassDefsForBackwardSlice(DexFile dexFile, String sliceMethod){

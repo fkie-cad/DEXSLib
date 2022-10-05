@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * Created by daniel baier on 26.01.17.
  *
- * This class stores all calls to constructors (<init>(...) of classes from the current analyzed clinit-method
+ * This class stores all calls to constructors ({@literal <}init{@literal >}(...) of classes from the current analyzed clinit-method
  */
 public class InitCallRef {
 

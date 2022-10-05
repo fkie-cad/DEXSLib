@@ -139,7 +139,7 @@ public class SmaliLayerUtils {
 
     /**
      *
-     * @param callingRef is the full Methodname L<class>->methodname(<params>)ReturnType
+     * @param callingRef is the full Methodname L{@literal <}class{@literal >}-{@literal >}methodname({@literal <}params{@literal >})ReturnType
      * @return
      */
     public static String getReturnTypeOfFullMethodName(String callingRef){
