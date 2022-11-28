@@ -5,6 +5,8 @@ This project aims as an open source library for static backward and forward slic
 
 It is build upon [dexlib2](https://github.com/JesusFreke/smali/tree/master/dexlib2).
 
+**currently this project is under heavy refactoring and is there at this time in a not usable state**
+
 ## Why Slicing?
 
 When it comes to reverse engineering 3rd party, closed, binary Android apps - espcially Android malware - we often have the need to analyse the code based on certain methods or instructions. The direction might be either forward or backwards. 
