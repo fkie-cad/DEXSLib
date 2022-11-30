@@ -5,7 +5,7 @@ This project aims as an open source library for static backward and forward slic
 
 It is build upon [dexlib2](https://github.com/JesusFreke/smali/tree/master/dexlib2).
 
-**currently this project is under heavy refactoring and is there at this time in a not usable state**
+*Currently, the project is being heavily refactored and is therefore in an unusable state*
 
 ## Why Slicing?
 
